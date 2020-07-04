@@ -1,0 +1,19 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+$dark-blue: #222831;
+$blue: #30475e;
+$gold: #c1a57b;
+$nude: #ececec;
+$black: #212121;
+$white: #ffffff;
+
+.navbar {
+  background-color: $dark-blue;
+  .navbar-brand {
+    color: $white;
+    margin: 0 auto;
+  }
+}
+section {
+  padding-top: 3em;
+}
