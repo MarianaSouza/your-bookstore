@@ -10818,33 +10818,52 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
-.navbar {
+body {
+  color: #212121;
+  font-family: "Montserrat", sans-serif;
+}
+
+body .navbar {
   background-color: #222831;
 }
 
-.navbar .navbar-brand {
+body .navbar .navbar-brand {
   color: #ffffff;
   margin: 0 auto;
+  font-family: "Oswald", sans-serif;
 }
 
-section {
+body .navbar .navbar-brand h1 {
+  font-size: 1.5em;
+}
+
+body section {
   padding-top: 3em;
 }
 
-section p {
+body section p {
   margin-bottom: 0;
 }
 
-section img {
+body section h2 {
+  color: #30475e;
+  font-weight: 500;
+}
+
+body section img {
   padding-right: 1em;
 }
 
-section .list-group-item {
+body section span {
+  font-weight: bold;
+}
+
+body section .list-group-item {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
-section .btn {
+body section .btn {
   background-color: #c1a57b;
   color: #ffffff;
 }
@@ -10856,16 +10875,20 @@ section .btn {
             justify-content: space-between;
   }
   section li p {
-    width: 50%;
+    width: 40%;
   }
 }
 
-@media (max-width: 992px) {
-  section li h3 {
+@media (max-width: 991px) {
+  section li h2 {
     margin-top: 0.5em;
   }
   section li p {
-    margin: 1rem 0;
+    margin: 1rem 0 0.5em 0;
+  }
+  section li span {
+    width: 100%;
+    margin-bottom: 1em;
   }
 }
 /*# sourceMappingURL=style.css.map */

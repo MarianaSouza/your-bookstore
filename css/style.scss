@@ -7,25 +7,46 @@ $nude: #ececec;
 $black: #212121;
 $white: #ffffff;
 
-.navbar {
-  background-color: $dark-blue;
-  .navbar-brand {
-    color: $white;
-    margin: 0 auto;
+$font-primary:'Montserrat', sans-serif;
+$font-secondary: 'Oswald', sans-serif;
+
+body {
+  color: $black;
+  font-family: $font-primary;
+  .navbar {
+    background-color: $dark-blue;
+    .navbar-brand {
+      color: $white;
+      margin: 0 auto;
+      font-family: $font-secondary;
+      h1{
+        font-size: 1.5em;
+      }
+    }
   }
-}
-section {
-  padding-top: 3em;
-  p {
-    margin-bottom: 0;
+  section {
+    padding-top: 3em;
+    p {
+      margin-bottom: 0;
+    }
+    h2 {
+      color: $blue;
+      font-weight: 500;
+    }
+    img {
+      padding-right: 1em;
+    }
+    span{
+      font-weight: bold;
+    }
+    .list-group-item {
+      flex-wrap: wrap;
+    }
+    .btn {
+      background-color: $gold;
+      color: $white;
+    }
   }
-  img {
-    padding-right: 1em;
-  }
-  .list-group-item {
-    flex-wrap: wrap;
-  }
-  .btn{background-color: $gold; color: $white}
 }
 
 @media (min-width: 992px) {
@@ -33,19 +54,23 @@ section {
     li {
       justify-content: space-between;
       p {
-        width: 50%;
+        width: 40%;
       }
     }
   }
 }
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   section {
     li {
-      h3{
+      h2 {
         margin-top: 0.5em;
       }
       p {
-        margin: 1rem 0;
+        margin: 1rem 0 0.5em 0;
+      }
+      span{
+        width: 100%;
+        margin-bottom: 1em;
       }
     }
   }
