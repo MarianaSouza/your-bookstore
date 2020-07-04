@@ -10848,6 +10848,7 @@ body section p {
 body section h2 {
   color: #30475e;
   font-weight: 500;
+  font-size: 1.3em;
 }
 
 body section img {
@@ -10868,14 +10869,21 @@ body section .btn {
   color: #ffffff;
 }
 
+body section .btn i.fa.fa-plus:hover {
+  color: #222831;
+}
+
 @media (min-width: 992px) {
   section li {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  section li p {
+  section li > p {
     width: 40%;
+  }
+  section li > h2 {
+    width: 25%;
   }
 }
 

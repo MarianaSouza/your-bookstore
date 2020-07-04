@@ -7,8 +7,8 @@ $nude: #ececec;
 $black: #212121;
 $white: #ffffff;
 
-$font-primary:'Montserrat', sans-serif;
-$font-secondary: 'Oswald', sans-serif;
+$font-primary: "Montserrat", sans-serif;
+$font-secondary: "Oswald", sans-serif;
 
 body {
   color: $black;
@@ -19,7 +19,7 @@ body {
       color: $white;
       margin: 0 auto;
       font-family: $font-secondary;
-      h1{
+      h1 {
         font-size: 1.5em;
       }
     }
@@ -32,11 +32,12 @@ body {
     h2 {
       color: $blue;
       font-weight: 500;
+      font-size: 1.3em;
     }
     img {
       padding-right: 1em;
     }
-    span{
+    span {
       font-weight: bold;
     }
     .list-group-item {
@@ -45,6 +46,9 @@ body {
     .btn {
       background-color: $gold;
       color: $white;
+      i.fa.fa-plus:hover {
+        color: $dark-blue;
+      }
     }
   }
 }
@@ -53,8 +57,11 @@ body {
   section {
     li {
       justify-content: space-between;
-      p {
+      > p {
         width: 40%;
+      }
+      > h2{
+        width: 25%;
       }
     }
   }
@@ -68,7 +75,7 @@ body {
       p {
         margin: 1rem 0 0.5em 0;
       }
-      span{
+      span {
         width: 100%;
         margin-bottom: 1em;
       }
