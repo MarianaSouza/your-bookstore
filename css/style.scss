@@ -16,4 +16,37 @@ $white: #ffffff;
 }
 section {
   padding-top: 3em;
+  p {
+    margin-bottom: 0;
+  }
+  img {
+    padding-right: 1em;
+  }
+  .list-group-item {
+    flex-wrap: wrap;
+  }
+  .btn{background-color: $gold; color: $white}
+}
+
+@media (min-width: 992px) {
+  section {
+    li {
+      justify-content: space-between;
+      p {
+        width: 50%;
+      }
+    }
+  }
+}
+@media (max-width: 992px) {
+  section {
+    li {
+      h3{
+        margin-top: 0.5em;
+      }
+      p {
+        margin: 1rem 0;
+      }
+    }
+  }
 }

@@ -10830,4 +10830,42 @@ a.text-dark:hover, a.text-dark:focus {
 section {
   padding-top: 3em;
 }
+
+section p {
+  margin-bottom: 0;
+}
+
+section img {
+  padding-right: 1em;
+}
+
+section .list-group-item {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+section .btn {
+  background-color: #c1a57b;
+  color: #ffffff;
+}
+
+@media (min-width: 992px) {
+  section li {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  section li p {
+    width: 50%;
+  }
+}
+
+@media (max-width: 992px) {
+  section li h3 {
+    margin-top: 0.5em;
+  }
+  section li p {
+    margin: 1rem 0;
+  }
+}
 /*# sourceMappingURL=style.css.map */
