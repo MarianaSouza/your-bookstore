@@ -1,0 +1,36 @@
+[
+    {
+      "id": "001",
+      "image": "https://via.placeholder.com/150",
+      "alt": "Blindness cover",
+      "title": "Blindness",
+      "description": "Blindness is the story of an unexplained mass epidemic of blindness afflicting nearly everyone in an unnamed city, and the social breakdown that swiftly follows.",
+      "options" : {
+        "Physical": 1550,
+        "PDF": 550
+      }
+    },
+    {
+      "id": "002",
+      "image": "https://via.placeholder.com/150",
+      "alt": "One Hundred Years of Solitude cover",
+      "title": "One Hundred Years of Solitude",
+      "description": "One Hundred Years of Solitude is a landmark 1967 novel by Colombian author Gabriel García Márquez that tells the multi-generational story of the Buendía family, whose patriarch, José Arcadio Buendía, founded the town of Macondo, Colombia.",
+      "options" : {
+        "Physical": 1375,
+        "PDF": 375
+      }
+    },
+    {
+      "id": "003",
+      "image": "https://via.placeholder.com/150",
+      "alt": "Thinking, Fast and Slow cover",
+      "title": "Thinking, Fast and Slow",
+      "description": "Thinking, Fast and Slow is a best-selling book published in 2011 by Nobel Memorial Prize in Economic Sciences laureate Daniel Kahneman.",
+      "options" : {
+        "Physical": 1289,
+        "PDF": 289
+      }
+    }
+  ]
+  
