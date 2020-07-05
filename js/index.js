@@ -6,10 +6,14 @@ $(document).ready(function () {
     loadProducts();
 });
 
-function loadProducts() {
-    $.getJSON('content/books.json', function (data) {
+function loadProducts(){
+    fetch("content/books.json")
+    .then(function(resp){
+        return resp.json();
+    })
+    .then(function(data){
         let listItems = [];
-        $.each(data, function (key, val) {
+        [].forEach.call(data, function(val){
             let orderLineItem = {
                 "book": val,
                 "count": 0
@@ -31,13 +35,11 @@ function loadProducts() {
                 '</li>';
 
             listItems.push(listItem);
-        });
 
+        })
         $("#all-products").append(listItems.join(''));
-        // Task 2: Add the missing line. Hint: The list may need to be refreshed to reapply the styles as the list is build dynamically instead of static
-        // $("#all-products").listview('refresh');
-        // $('#all-products').trigger('change', true);
-    });
+    })
+
 }
 
 
