@@ -24,9 +24,9 @@ function loadProducts() {
                 '<i class="fa fa-plus" aria-hidden="true"></i> ' + '<i class="fa fa-usd" aria-hidden="true"></i> ' +
                 '<span>' + orderLineItem.book.options.Physical + '</span>' +
                 '</button>' +
-                '<button type="button" class="btn" title="' + orderLineItem.book.titlePDF + '">' +
-                '<i class="fa fa-plus" aria-hidden="true"></i> ' + '<i class="fa fa-usd" aria-hidden="true"></i> ' +
-                '<span>' + orderLineItem.book.options.PDF + '</span>' +
+                '<button type="button" class="btn" title="' + orderLineItem.book.titlePDF + '">' + 
+                '<i class="fa fa-plus" aria-hidden="true"></i> ' + 
+                '<span>' + "PDF " + '<i class="fa fa-usd" aria-hidden="true"></i> '+ orderLineItem.book.options.PDF + '</span>' +
                 '</button>' +
                 '</li>';
 
