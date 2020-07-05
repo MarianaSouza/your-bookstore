@@ -39,7 +39,7 @@ body {
     }
     span {
       font-weight: bold;
-      font-size: 0.875em;
+      font-size: 0.9em;
     }
     .list-group-item {
       flex-wrap: wrap;
@@ -47,8 +47,15 @@ body {
     .btn {
       background-color: $gold;
       color: $white;
-      i.fa.fa-plus:hover {
+      &:hover{
         color: $dark-blue;
+      }
+      i.fa.fa-plus {
+        font-size: 0.9em;
+      }
+      i.fa.fa-usd {
+        font-size: 0.9em;
+        padding-left: 0.3em;
       }
     }
   }

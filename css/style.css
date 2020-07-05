@@ -10857,7 +10857,7 @@ body section img {
 
 body section span {
   font-weight: bold;
-  font-size: 0.875em;
+  font-size: 0.9em;
 }
 
 body section .list-group-item {
@@ -10870,8 +10870,17 @@ body section .btn {
   color: #ffffff;
 }
 
-body section .btn i.fa.fa-plus:hover {
+body section .btn:hover {
   color: #222831;
+}
+
+body section .btn i.fa.fa-plus {
+  font-size: 0.9em;
+}
+
+body section .btn i.fa.fa-usd {
+  font-size: 0.9em;
+  padding-left: 0.3em;
 }
 
 @media (min-width: 992px) {
