@@ -36,7 +36,11 @@ function loadProducts(){
             listItems.push(listItem);
 
         })
-        $("#all-products").append(listItems.join(''));
+        let allProducts = document.getElementById("all-products");
+        let element = document.createElement('ul');
+        element.classList.add("list-group")
+        element.innerHTML = listItems.join('');
+        allProducts.appendChild(element);
     })
 
 }
