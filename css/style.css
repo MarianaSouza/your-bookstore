@@ -10857,6 +10857,7 @@ body section img {
 
 body section span {
   font-weight: bold;
+  font-size: 0.875em;
 }
 
 body section .list-group-item {
@@ -10880,10 +10881,10 @@ body section .btn i.fa.fa-plus:hover {
             justify-content: space-between;
   }
   section li > p {
-    width: 40%;
+    width: 35%;
   }
   section li > h2 {
-    width: 25%;
+    width: 20%;
   }
 }
 
@@ -10897,6 +10898,9 @@ body section .btn i.fa.fa-plus:hover {
   section li span {
     width: 100%;
     margin-bottom: 1em;
+  }
+  section li .btn:first-of-type {
+    margin-right: 1em;
   }
 }
 /*# sourceMappingURL=style.css.map */

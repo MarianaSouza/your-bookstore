@@ -39,6 +39,7 @@ body {
     }
     span {
       font-weight: bold;
+      font-size: 0.875em;
     }
     .list-group-item {
       flex-wrap: wrap;
@@ -58,10 +59,10 @@ body {
     li {
       justify-content: space-between;
       > p {
-        width: 40%;
+        width: 35%;
       }
       > h2{
-        width: 25%;
+        width: 20%;
       }
     }
   }
@@ -78,6 +79,11 @@ body {
       span {
         width: 100%;
         margin-bottom: 1em;
+      }
+      .btn{
+        &:first-of-type{
+          margin-right: 1em;
+        }
       }
     }
   }
