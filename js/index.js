@@ -2,9 +2,8 @@ let finalOrder = {};
 let orderLineItems = {};
 let finalAmount = 0;
 
-$(document).ready(function () {
-    loadProducts();
-});
+
+loadProducts();
 
 function loadProducts(){
     fetch("content/books.json")
