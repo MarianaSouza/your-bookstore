@@ -5,14 +5,21 @@ let finalAmount = 0;
 
 loadProducts();
 
-function loadProducts(){
+function loadProducts() {
     fetch("content/books.json")
-    .then(function(resp){
-        return resp.json();
-    })
-    .then(function(data){
+        .then(function (resp) {
+            return resp.json();
+        })
+        .then(function (data) {
+            appendData(data)
+        })
+        .catch(function (err) {
+            console.log('error: ' + err);
+        });
+
+    function appendData(data) {
         let listItems = [];
-        [].forEach.call(data, function(val){
+        [].forEach.call(data, function (val) {
             let orderLineItem = {
                 "book": val,
                 "count": 0
@@ -27,9 +34,9 @@ function loadProducts(){
                 '<i class="fa fa-plus" aria-hidden="true"></i> ' + '<i class="fa fa-usd" aria-hidden="true"></i> ' +
                 '<span>' + orderLineItem.book.options.Physical + '</span>' +
                 '</button>' +
-                '<button type="button" class="btn" title="' + orderLineItem.book.titlePDF + '">' + 
-                '<i class="fa fa-plus" aria-hidden="true"></i> ' + 
-                '<span>' + "PDF " + '<i class="fa fa-usd" aria-hidden="true"></i> '+ orderLineItem.book.options.PDF + '</span>' +
+                '<button type="button" class="btn" title="' + orderLineItem.book.titlePDF + '">' +
+                '<i class="fa fa-plus" aria-hidden="true"></i> ' +
+                '<span>' + "PDF " + '<i class="fa fa-usd" aria-hidden="true"></i> ' + orderLineItem.book.options.PDF + '</span>' +
                 '</button>' +
                 '</li>';
 
@@ -41,7 +48,7 @@ function loadProducts(){
         element.classList.add("list-group")
         element.innerHTML = listItems.join('');
         allProducts.appendChild(element);
-    })
+    }
 
 }
 
