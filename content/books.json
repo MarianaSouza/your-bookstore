@@ -5,12 +5,8 @@
       "alt": "Blindness cover",
       "bookTitle": "Blindness",
       "description": "Blindness is the story of an unexplained mass epidemic of blindness afflicting nearly everyone in an unnamed city, and the social breakdown that swiftly follows.",
-      "titlePhysical": "Blindness Physical Book",
-      "titlePDF": "Blindness PDF Book" ,
-      "options" : {
-        "Physical": 15.50,
-        "PDF": 5.50
-      }
+      "title": "Blindness Physical Book",
+      "price" : 5.50
     },
     {
       "id": "2",
@@ -18,12 +14,9 @@
       "alt": "One Hundred Years of Solitude cover",
       "bookTitle": "One Hundred Years of Solitude",
       "description": "One Hundred Years of Solitude is a landmark 1967 novel by Colombian author Gabriel García Márquez that tells the multi-generational story of the Buendía family, whose patriarch, José Arcadio Buendía, founded the town of Macondo, Colombia.",
-      "titlePhysical": "One Hundred Years of Solitude Physical Book",
-      "titlePDF": "One Hundred Years of Solitude PDF Book" ,
-      "options" : {
-        "Physical": 13.75,
-        "PDF": 3.75
-      }
+      "title": "One Hundred Years of Solitude Physical Book",
+      "price": 3.75
+     
     },
     {
       "id": "3",
@@ -31,12 +24,8 @@
       "alt": "Thinking, Fast and Slow cover",
       "bookTitle": "Thinking, Fast and Slow",
       "description": "Thinking, Fast and Slow is a best-selling book published in 2011 by Nobel Memorial Prize in Economic Sciences laureate Daniel Kahneman.",
-      "titlePhysical": "Add Thinking, Fast and Slow Physical Book",
-      "titlePDF": "Add Thinking, Fast and Slow PDF Book" ,
-      "options" : {
-        "Physical": 12.89,
-        "PDF": 2.89
-      }
+      "title": "Add Thinking, Fast and Slow Physical Book",
+      "price": 2.98
     }
   ]
   

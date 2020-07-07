@@ -29,13 +29,9 @@ function loadProducts() {
                 '<img src = " ' + book.image + ' " alt = "' + book.alt + '"/> ' +
                 '<h2>' + book.bookTitle + '</h2 >' +
                 '<p>' + book.description + '</p >' +
-                '<button type="button" class="btn" onclick="Add('+book.id+')" title="' + book.titlePhysical + '">' +
-                '<i class="fa fa-plus" aria-hidden="true"></i> ' + '<i class="fa fa-usd" aria-hidden="true"></i> ' +
-                '<span>' + book.options.Physical + '</span>' +
-                '</button>' +
-                '<button type="button" class="btn" title="' + book.titlePDF + '">' +
+                '<button type="button" class="btn" onclick="Add(' + book.id + ')" title="' + book.title + '">' +
                 '<i class="fa fa-plus" aria-hidden="true"></i> ' +
-                '<span>' + "PDF " + '<i class="fa fa-usd" aria-hidden="true"></i> ' + book.options.PDF + '</span>' +
+                '<span>' + "PDF " + '<i class="fa fa-usd" aria-hidden="true"></i> ' + + book.price + '</span>' +
                 '</button>' +
                 '</li>';
 
@@ -53,33 +49,33 @@ function loadProducts() {
 function displaySelectedList() {
     let listSelectedItems = [];
     allBooks.forEach(function (orderLineItem) {
-        console.log("Order", orderLineItem);
-        if(orderLineItem.count == 0) return;
+        if (orderLineItem.count == 0) return;
         let book = orderLineItem.item;
         let listSelectedItem =
             '<li class="list-group-item d-flex align-items-center">' +
             '<img src=" ' + book.image + ' " alt = "' + book.alt + '"/>' +
             '<h2>' + book.bookTitle + '</h2>' +
-            '<p>' + orderLineItem.count + '</p>' +
+            '<span class="selectedListCount">' + orderLineItem.count + '</span>' +
             '<button id="btn_' + book.id + '_add" onclick="Remove(this)" type="button" class="btn"><strong>Remove</strong></button>' +
             '</li>';
 
         listSelectedItems.push(listSelectedItem);
     })
     let selectedProducts = document.getElementById("selected-products-div");
-    while(selectedProducts.firstChild) selectedProducts.removeChild(selectedProducts.firstChild);
+    while (selectedProducts.firstChild) selectedProducts.removeChild(selectedProducts.firstChild);
     let element = document.createElement('ul');
     element.classList.add("list-group")
     element.innerHTML = listSelectedItems.join('');
     selectedProducts.appendChild(element);
-   
+
 }
 
-function Add(id){
+function Add(id) {
     allBooks.forEach(book => {
-        if(id == book.item.id){
-            book.count = book.count + 1;  
+        if (id == book.item.id) {
+            book.count = book.count + 1;
         }
     })
     displaySelectedList()
 }
+
