@@ -10883,6 +10883,10 @@ body section .btn i.fa.fa-usd {
   padding-left: 0.3em;
 }
 
+body section #selected-products-div {
+  padding-top: 4em;
+}
+
 @media (min-width: 992px) {
   section li {
     -webkit-box-pack: justify;
