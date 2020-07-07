@@ -1,6 +1,6 @@
 [
     {
-      "id": "001",
+      "id": "1",
       "image": "https://via.placeholder.com/150",
       "alt": "Blindness cover",
       "bookTitle": "Blindness",
@@ -13,7 +13,7 @@
       }
     },
     {
-      "id": "002",
+      "id": "2",
       "image": "https://via.placeholder.com/150",
       "alt": "One Hundred Years of Solitude cover",
       "bookTitle": "One Hundred Years of Solitude",
@@ -26,7 +26,7 @@
       }
     },
     {
-      "id": "003",
+      "id": "3",
       "image": "https://via.placeholder.com/150",
       "alt": "Thinking, Fast and Slow cover",
       "bookTitle": "Thinking, Fast and Slow",
