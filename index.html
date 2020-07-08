@@ -54,14 +54,43 @@
       <!-- Content here -->
       <div class="row">
         <div class="col-sm" id="all-products">
-           <!--All items are loaded here-->
+          <!--All items are loaded here-->
         </div>
       </div>
       <div class="row">
-        <div class="col-sm" id="selected-products-div">
-          <ul id="selected-products">
-            <!--All selcted items are displayed here-->
-          </ul>
+        <div id="accordion" class="col-sm selected-list">
+          <div class="card">
+            <div
+              class="card-header"
+              id="headingOne"
+              data-toggle="collapse"
+              data-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              <h3 class="mb-0">
+                Check your Order
+                <button class="btn btn-link plus">
+                  <i class="fa fa-plus" aria-hidden="true"></i>
+                </button>
+                <!-- <button class="btn btn-link minus">
+                  <i class="fa fa-minus" aria-hidden="true"></i>
+                </button> -->
+              </h3>
+            </div>
+            <div
+              id="collapseOne"
+              class="collapse show"
+              aria-labelledby="headingOne"
+              data-parent="#accordion"
+            >
+              <div id="selected-products-div">
+                <ul id="selected-products">
+                  <!--All selcted items are displayed here-->
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -52,12 +52,14 @@ function displaySelectedList() {
         if (orderLineItem.count == 0) return;
         let book = orderLineItem.item;
         let listSelectedItem =
+            '<div class="card-body">' +
             '<li class="list-group-item d-flex align-items-center">' +
             '<img src=" ' + book.image + ' " alt = "' + book.alt + '"/>' +
-            '<h2>' + book.bookTitle + '</h2>' +
+            '<h4>' + book.bookTitle + '</h4>' +
             '<span class="selectedListCount">' + orderLineItem.count + '</span>' +
             '<button id="btn_' + book.id + '_add" onclick="Remove(' + book.id + ')" type="button" class="btn"><strong>Remove</strong></button>' +
-            '</li>';
+            '</li>' +
+            '</div>';
 
         listSelectedItems.push(listSelectedItem);
     })
@@ -79,7 +81,7 @@ function Add(id) {
     displaySelectedList()
 }
 
-function Remove (id){
+function Remove(id) {
     allBooks.forEach(book => {
         if (id == book.item.id) {
             book.count = book.count - 1;

@@ -10848,7 +10848,21 @@ body section p {
 body section h2 {
   color: #30475e;
   font-weight: 500;
-  font-size: 1.3em;
+  font-size: 1.25em;
+}
+
+body section h3 {
+  color: #30475e;
+  font-weight: 500;
+  font-size: 1.2em;
+  position: relative;
+  top: 0.5em;
+}
+
+body section h4 {
+  color: #30475e;
+  font-weight: 500;
+  font-size: 1.1em;
 }
 
 body section img {
@@ -10883,8 +10897,18 @@ body section .btn i.fa.fa-usd {
   padding-left: 0.3em;
 }
 
-body section #selected-products-div {
-  padding: 4em 0;
+body section .btn.btn-link {
+  float: right;
+  position: relative;
+  top: -0.5em;
+}
+
+body section .selected-list {
+  margin: 4em auto;
+}
+
+body section .selected-list .card-header {
+  background-color: #ffffff;
 }
 
 @media (min-width: 992px) {
@@ -10902,15 +10926,15 @@ body section #selected-products-div {
 }
 
 @media (max-width: 991px) {
-  section li h2 {
+  section li h2, section li h4 {
     margin-top: 0.5em;
   }
   section li p {
-    margin: 1rem 0 0.5em 0;
+    margin: 1em 0 0.5em 0;
   }
   section li span {
     width: 100%;
-    margin-bottom: 1em;
+    margin: 0.5em auto 0.8em auto;
   }
   section li .btn:first-of-type {
     margin-right: 1em;

@@ -32,7 +32,19 @@ body {
     h2 {
       color: $blue;
       font-weight: 500;
-      font-size: 1.3em;
+      font-size: 1.25em;
+    }
+    h3 {
+      color: $blue;
+      font-weight: 500;
+      font-size: 1.2em;
+      position: relative;
+      top: 0.5em;
+    }
+    h4 {
+      color: $blue;
+      font-weight: 500;
+      font-size: 1.1em;
     }
     img {
       padding-right: 1em;
@@ -47,7 +59,7 @@ body {
     .btn {
       background-color: $gold;
       color: $white;
-      &:hover{
+      &:hover {
         color: $dark-blue;
       }
       i.fa.fa-plus {
@@ -57,9 +69,17 @@ body {
         font-size: 0.9em;
         padding-left: 0.3em;
       }
+      &.btn-link {
+        float: right;
+        position: relative;
+        top: -0.5em;
+      }
     }
-    #selected-products-div{
-      padding: 4em 0;
+    .selected-list {
+      margin: 4em auto;
+      .card-header {
+        background-color: $white;
+      }
     }
   }
 }
@@ -71,7 +91,7 @@ body {
       > p {
         width: 35%;
       }
-      > h2{
+      > h2 {
         width: 20%;
       }
     }
@@ -80,18 +100,18 @@ body {
 @media (max-width: 991px) {
   section {
     li {
-      h2 {
+      h2, h4 {
         margin-top: 0.5em;
       }
       p {
-        margin: 1rem 0 0.5em 0;
+        margin: 1em 0 0.5em 0;
       }
       span {
         width: 100%;
-        margin-bottom: 1em;
+        margin: 0.5em auto 0.8em auto;
       }
-      .btn{
-        &:first-of-type{
+      .btn {
+        &:first-of-type {
           margin-right: 1em;
         }
       }
