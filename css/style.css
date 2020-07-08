@@ -10884,7 +10884,7 @@ body section .btn i.fa.fa-usd {
 }
 
 body section #selected-products-div {
-  padding-top: 4em;
+  padding: 4em 0;
 }
 
 @media (min-width: 992px) {

@@ -56,7 +56,7 @@ function displaySelectedList() {
             '<img src=" ' + book.image + ' " alt = "' + book.alt + '"/>' +
             '<h2>' + book.bookTitle + '</h2>' +
             '<span class="selectedListCount">' + orderLineItem.count + '</span>' +
-            '<button id="btn_' + book.id + '_add" onclick="Remove(this)" type="button" class="btn"><strong>Remove</strong></button>' +
+            '<button id="btn_' + book.id + '_add" onclick="Remove(' + book.id + ')" type="button" class="btn"><strong>Remove</strong></button>' +
             '</li>';
 
         listSelectedItems.push(listSelectedItem);
@@ -74,6 +74,15 @@ function Add(id) {
     allBooks.forEach(book => {
         if (id == book.item.id) {
             book.count = book.count + 1;
+        }
+    })
+    displaySelectedList()
+}
+
+function Remove (id){
+    allBooks.forEach(book => {
+        if (id == book.item.id) {
+            book.count = book.count - 1;
         }
     })
     displaySelectedList()
