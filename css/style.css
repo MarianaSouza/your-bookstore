@@ -10852,7 +10852,6 @@ body section h2 {
 }
 
 body section h3 {
-  color: #30475e;
   font-weight: 500;
   font-size: 1.2em;
   position: relative;
@@ -10908,7 +10907,16 @@ body section .selected-list {
 }
 
 body section .selected-list .card-header {
-  background-color: #ffffff;
+  background-color: #222831;
+}
+
+body section .selected-list .card-header h3 {
+  color: #ffffff;
+}
+
+body section .selected-list .card-body li {
+  -webkit-box-shadow: 0px 2px 7px 0px silver;
+  box-shadow: 0px 2px 7px 0px silver;
 }
 
 @media (min-width: 992px) {
@@ -10926,7 +10934,8 @@ body section .selected-list .card-header {
 }
 
 @media (max-width: 991px) {
-  section li h2, section li h4 {
+  section li h2,
+  section li h4 {
     margin-top: 0.5em;
   }
   section li p {

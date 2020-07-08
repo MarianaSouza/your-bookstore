@@ -10,6 +10,12 @@ $white: #ffffff;
 $font-primary: "Montserrat", sans-serif;
 $font-secondary: "Oswald", sans-serif;
 
+@mixin cards-boxShadow {
+  -webkit-box-shadow: 0px 2px 7px 0px rgba(192, 192, 192, 1);
+  -moz-box-shadow: 0px 2px 7px 0px rgba(192, 192, 192, 1);
+  box-shadow: 0px 2px 7px 0px rgba(192, 192, 192, 1);
+}
+
 body {
   color: $black;
   font-family: $font-primary;
@@ -35,7 +41,6 @@ body {
       font-size: 1.25em;
     }
     h3 {
-      color: $blue;
       font-weight: 500;
       font-size: 1.2em;
       position: relative;
@@ -78,7 +83,16 @@ body {
     .selected-list {
       margin: 4em auto;
       .card-header {
-        background-color: $white;
+        background-color: $dark-blue;
+        h3{
+          color: $white;
+        }
+      }
+      .card-body{
+        li{
+          @include cards-boxShadow;
+        }
+
       }
     }
   }
@@ -100,7 +114,8 @@ body {
 @media (max-width: 991px) {
   section {
     li {
-      h2, h4 {
+      h2,
+      h4 {
         margin-top: 0.5em;
       }
       p {
