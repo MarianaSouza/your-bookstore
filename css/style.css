@@ -10853,9 +10853,10 @@ body main h2 {
 
 body main h3 {
   font-weight: 500;
-  font-size: 1.2em;
+  font-size: 1.4em;
   position: relative;
   top: 0.5em;
+  font-family: "Oswald", sans-serif;
 }
 
 body main h4 {
@@ -10926,6 +10927,8 @@ body footer span {
   color: #ffffff;
   margin: 1em;
   font-weight: bold;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.2em;
 }
 
 body footer .btn {
@@ -10956,18 +10959,18 @@ body footer .btn:hover {
 }
 
 @media (max-width: 991px) {
-  section li h2,
-  section li h4 {
-    margin-top: 0.5em;
+  main li h2,
+  main li h4 {
+    margin-top: 0.75em;
   }
-  section li p {
+  main li p {
     margin: 1em 0 0.5em 0;
   }
-  section li span {
+  main li span {
     width: 100%;
     margin: 0.5em auto 0.8em auto;
   }
-  section li .btn:first-of-type {
+  main li .btn:first-of-type {
     margin-right: 1em;
   }
 }
