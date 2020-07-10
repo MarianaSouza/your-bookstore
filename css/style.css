@@ -10886,7 +10886,8 @@ body main .btn:hover {
 }
 
 body main .btn:focus {
-  outline: none !important;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 body main .btn i.fa.fa-plus {
@@ -10949,7 +10950,8 @@ body footer .btn:hover {
 }
 
 body footer .btn:focus {
-  outline: none !important;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 @media (min-width: 992px) {
