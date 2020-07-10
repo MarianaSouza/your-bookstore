@@ -50,7 +50,7 @@
         ><h1>Your Digital Book Store</h1></a
       >
     </nav>
-    <section class="container">
+    <main class="container">
       <!-- Content here -->
       <div class="row">
         <div class="col-sm" id="all-products">
@@ -70,12 +70,9 @@
             >
               <h3 class="mb-0">
                 Check your Order
-                <button class="btn btn-link plus">
+                <button class="btn btn-link">
                   <i class="fa fa-chevron-down" aria-hidden="true"></i>
                 </button>
-                <!-- <button class="btn btn-link minus">
-                  <i class="fa fa-minus" aria-hidden="true"></i>
-                </button> -->
               </h3>
             </div>
             <div
@@ -93,8 +90,11 @@
           </div>
         </div>
       </div>
-    </section>
-    <footer class="container"></footer>
+    </main>
+    <footer class="container-fluid">
+      <span id="payment_amount">$ Total</span>
+      <button id="place-order-button" class="btn" type="button">Place Order</button>
+    </footer>
     <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
     <!-- <script src="./node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="./node_modules/popper.js/dist/umd/popper.min.js"></script>

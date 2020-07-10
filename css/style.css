@@ -10837,98 +10837,120 @@ body .navbar .navbar-brand h1 {
   font-size: 1.5em;
 }
 
-body section {
+body main {
   padding-top: 3em;
 }
 
-body section p {
+body main p {
   margin-bottom: 0;
 }
 
-body section h2 {
+body main h2 {
   color: #30475e;
   font-weight: 500;
   font-size: 1.25em;
 }
 
-body section h3 {
+body main h3 {
   font-weight: 500;
   font-size: 1.2em;
   position: relative;
   top: 0.5em;
 }
 
-body section h4 {
+body main h4 {
   color: #30475e;
   font-weight: 500;
   font-size: 1.1em;
 }
 
-body section img {
+body main img {
   padding-right: 1em;
 }
 
-body section span {
-  font-weight: bold;
-  font-size: 0.9em;
-}
-
-body section .list-group-item {
+body main .list-group-item {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
-body section .btn {
+body main .btn {
   background-color: #c1a57b;
   color: #ffffff;
-}
-
-body section .btn:hover {
-  color: #222831;
-}
-
-body section .btn i.fa.fa-plus {
+  font-weight: bold;
   font-size: 0.9em;
 }
 
-body section .btn i.fa.fa-usd {
+body main .btn:hover {
+  color: #222831;
+}
+
+body main .btn i.fa.fa-plus {
+  font-size: 0.9em;
+}
+
+body main .btn i.fa.fa-usd {
   font-size: 0.9em;
   padding-left: 0.3em;
 }
 
-body section .btn.btn-link {
+body main .btn.btn-link {
   float: right;
   position: relative;
   top: -0.5em;
 }
 
-body section .selected-list {
+body main .selected-list {
   margin: 4em auto;
 }
 
-body section .selected-list .card-header {
+body main .selected-list .card-header {
   background-color: #222831;
 }
 
-body section .selected-list .card-header h3 {
+body main .selected-list .card-header h3 {
   color: #ffffff;
 }
 
-body section .selected-list .card-body li {
+body main .selected-list .card-body li {
   -webkit-box-shadow: 0px 2px 7px 0px silver;
   box-shadow: 0px 2px 7px 0px silver;
 }
 
+body footer {
+  background-color: #222831;
+  padding: 2em 1em;
+  text-align: center;
+}
+
+body footer span {
+  color: #ffffff;
+  margin: 1em;
+  font-weight: bold;
+}
+
+body footer .btn {
+  background-color: #c1a57b;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 0.9em;
+  display: block;
+  margin: 1em auto 0 auto;
+}
+
+body footer .btn:hover {
+  color: #222831;
+}
+
 @media (min-width: 992px) {
-  section li {
+  main li {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  section li > p {
+  main li > p {
     width: 35%;
   }
-  section li > h2 {
+  main li > h2 {
     width: 20%;
   }
 }

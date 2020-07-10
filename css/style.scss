@@ -16,6 +16,16 @@ $font-secondary: "Oswald", sans-serif;
   box-shadow: 0px 2px 7px 0px rgba(192, 192, 192, 1);
 }
 
+@mixin buttonStyle {
+  background-color: $gold;
+  color: $white;
+  font-weight: bold;
+  font-size: 0.9em;
+  &:hover {
+    color: $dark-blue;
+  }
+}
+
 body {
   color: $black;
   font-family: $font-primary;
@@ -30,7 +40,7 @@ body {
       }
     }
   }
-  section {
+  main {
     padding-top: 3em;
     p {
       margin-bottom: 0;
@@ -54,19 +64,11 @@ body {
     img {
       padding-right: 1em;
     }
-    span {
-      font-weight: bold;
-      font-size: 0.9em;
-    }
     .list-group-item {
       flex-wrap: wrap;
     }
     .btn {
-      background-color: $gold;
-      color: $white;
-      &:hover {
-        color: $dark-blue;
-      }
+      @include buttonStyle;
       i.fa.fa-plus {
         font-size: 0.9em;
       }
@@ -84,22 +86,36 @@ body {
       margin: 4em auto;
       .card-header {
         background-color: $dark-blue;
-        h3{
+        h3 {
           color: $white;
         }
       }
-      .card-body{
-        li{
+      .card-body {
+        li {
           @include cards-boxShadow;
         }
-
       }
+    }
+  }
+  footer{
+    background-color: $dark-blue;
+    padding: 2em 1em;
+    text-align: center;
+    span{
+      color: $white;
+      margin: 1em;
+      font-weight: bold;
+    }
+    .btn{
+      @include buttonStyle;
+      display: block;
+      margin: 1em auto 0 auto;
     }
   }
 }
 
 @media (min-width: 992px) {
-  section {
+  main {
     li {
       justify-content: space-between;
       > p {
