@@ -1,8 +1,10 @@
 let finalOrder = [];
 let allBooks = [];
 let finalAmount = 0;
+let placeOrderButton = document.getElementById("place-order-button");
 
 loadProducts();
+processPayment();
 
 function loadProducts() {
     fetch("content/books.json")
@@ -46,6 +48,31 @@ function loadProducts() {
     }
 }
 
+function processPayment() {
+    placeOrderButton.addEventListener("click", () => {
+        fetch('OrderProcessingServlet', {
+            method: 'POST',
+            body: JSON.stringify({ 'order': finalOrder }),
+            headers: { 'content-type': 'application/json' },
+        })
+            .then(function (response) {
+                if (response.ok) {
+                    console.log('Post Non Apple Payment successful !');
+                } else {
+                    console.log('Post Non Apple Payment Post failed !!!');
+                }
+            })
+            .catch(function (err) {
+                console.log('error: ' + err);
+            });
+    });
+    disableNonApplePayButton(true);
+}
+
+function disableNonApplePayButton(disable) {
+    placeOrderButton.disabled = disable;
+}
+
 function displaySelectedList() {
     let listSelectedItems = [];
     allBooks.forEach(function (orderLineItem) {
@@ -79,6 +106,7 @@ function Add(id) {
         }
     })
     displaySelectedList()
+    disableNonApplePayButton(false);
 }
 
 function Remove(id) {
@@ -88,5 +116,7 @@ function Remove(id) {
         }
     })
     displaySelectedList()
+    if (book.count == 0) disableNonApplePayButton(true);
 }
+
 

@@ -10885,6 +10885,10 @@ body main .btn:hover {
   color: #222831;
 }
 
+body main .btn:focus {
+  outline: none !important;
+}
+
 body main .btn i.fa.fa-plus {
   font-size: 0.9em;
 }
@@ -10942,6 +10946,10 @@ body footer .btn {
 
 body footer .btn:hover {
   color: #222831;
+}
+
+body footer .btn:focus {
+  outline: none !important;
 }
 
 @media (min-width: 992px) {

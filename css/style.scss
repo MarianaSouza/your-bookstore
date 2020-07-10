@@ -24,6 +24,9 @@ $font-secondary: "Oswald", sans-serif;
   &:hover {
     color: $dark-blue;
   }
+  &:focus {
+    outline: none !important;
+  }
 }
 
 body {
@@ -98,18 +101,18 @@ body {
       }
     }
   }
-  footer{
+  footer {
     background-color: $dark-blue;
     padding: 2em 1em;
     text-align: center;
-    span{
+    span {
       color: $white;
       margin: 1em;
       font-weight: bold;
       font-family: $font-secondary;
       font-size: 1.2em;
     }
-    .btn{
+    .btn {
       @include buttonStyle;
       display: block;
       margin: 1em auto 0 auto;
