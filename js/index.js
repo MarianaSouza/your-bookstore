@@ -110,13 +110,15 @@ function Add(id) {
 }
 
 function Remove(id) {
+    disableNonApplePayButton(true);
     allBooks.forEach(book => {
         if (id == book.item.id) {
             book.count = book.count - 1;
         }
+        if (book.count > 0) disableNonApplePayButton(false);
     })
+    
     displaySelectedList()
-    if (book.count == 0) disableNonApplePayButton(true);
 }
 
 
