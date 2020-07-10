@@ -84,7 +84,7 @@ function displaySelectedList() {
             '<img src=" ' + book.image + ' " alt = "' + book.alt + '"/>' +
             '<h4>' + book.bookTitle + '</h4>' +
             '<span class="selectedListCount">' + orderLineItem.count + '</span>' +
-            '<button id="btn_' + book.id + '_add" onclick="Remove(' + book.id + ')" type="button" class="btn"><strong>Remove</strong></button>' +
+            '<button id="btn_' + book.id + '_add" onclick="Remove(' + book.id + ')" type="button" class="btn" title="Remove Item"><strong>Remove</strong></button>' +
             '</li>' +
             '</div>';
 
@@ -105,6 +105,7 @@ function Add(id) {
             book.count = book.count + 1;
         }
     })
+    calculatePrice()
     displaySelectedList()
     disableNonApplePayButton(false);
 }
@@ -117,8 +118,33 @@ function Remove(id) {
         }
         if (book.count > 0) disableNonApplePayButton(false);
     })
-    
+    calculatePrice()
     displaySelectedList()
 }
 
+function calculatePrice() {
+    let subTotal = 0;
+    let finalOrderItems = [];
+
+    allBooks.forEach( (orderLineItem) =>{
+        if (orderLineItem.count != 0) {
+            let price = orderLineItem.item.price;
+            subTotal = subTotal + orderLineItem.count * price;
+            finalOrderItems.push(orderLineItem);
+        }
+    });
+    let paymentAmount = document.getElementById("payment_amount")
+
+    paymentAmount.innerHTML = "$ " + subTotal.toFixed(2);
+
+    finalOrder = {
+        "finalOrderItems": finalOrderItems,
+        "subTotal": subTotal
+    };
+
+    finalAmount = subTotal.toFixed(2);
+
+    console.log('Final amount : ' + finalAmount)
+    console.log('Your Order : ', JSON.stringify(finalOrder));
+}
 
