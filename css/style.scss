@@ -115,7 +115,7 @@ body {
     .btn {
       @include buttonStyle;
       display: block;
-      margin: 1em auto 0 auto;
+      margin: 1em auto 1em auto;
     }
   }
 }

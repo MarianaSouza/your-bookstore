@@ -2,6 +2,7 @@ let finalOrder = [];
 let allBooks = [];
 let finalAmount = 0;
 let placeOrderButton = document.getElementById("place-order-button");
+let placeOrderMessage = document.getElementById("payment_order_message");
 
 loadProducts();
 processPayment();
@@ -60,6 +61,7 @@ function processPayment() {
                     console.log('Post Non Apple Payment successful !');
                 } else {
                     console.log('Post Non Apple Payment Post failed !!!');
+                    placeOrderMessage.innerHTML = "Sorry, this is a fake serverless app... I totally recommend those books though."
                 }
             })
             .catch(function (err) {
@@ -67,6 +69,7 @@ function processPayment() {
             });
     });
     disableNonApplePayButton(true);
+    
 }
 
 function disableNonApplePayButton(disable) {
@@ -120,6 +123,7 @@ function Remove(id) {
     })
     calculatePrice()
     displaySelectedList()
+    placeOrderMessage.innerHTML = " ";
 }
 
 function calculatePrice() {
